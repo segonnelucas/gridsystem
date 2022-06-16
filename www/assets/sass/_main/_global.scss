@@ -1,0 +1,13 @@
+// VISIBILITY PURPOSE
+.grid {
+  font-size: 2.5em;
+  background-color: antiquewhite;
+
+  &__inner {
+    background-color: aquamarine;
+  }
+
+  .sub-grid__inner {
+    background-color: red;
+  }
+}

@@ -1,0 +1,11 @@
+#### GENERAL ####
+*.zip
+*.sql
+*.tar.gz
+*.code-workspace
+
+#### IMAGES ####
+www/assets/static/img/*
+
+#### NPM ####
+node_modules

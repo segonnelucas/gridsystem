@@ -1,0 +1,18 @@
+.grid{
+    display: grid;
+    grid-template-columns: [grid-full-start] minmax(1em, 1fr) [grid-main-start] minmax(0, $grid-width-large) [grid-main-end] minmax(1em, 1fr) [grid-full-end];
+    & > * {
+        grid-column: grid-full;
+    }
+    &__inner{
+        grid-column: grid-main;
+    }
+    & > .sub-grid{
+        display: grid;
+        grid-template-columns: [sub-grid-start] minmax(0, $grid-width) [sub-grid-end];
+        justify-content: center;
+        &__inner{
+            grid-column: sub-grid;
+        }
+    }
+}

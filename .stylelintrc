@@ -1,0 +1,20 @@
+{
+   "extends": [
+      "stylelint-config-prettier", 
+      "prettier"
+   ],
+   "plugins": ["stylelint-prettier", "stylelint-order"],
+   "rules": {
+      "prettier/prettier": [true, { "singleQuote": false }],
+      "order/properties-alphabetical-order": true,
+      "at-rule-empty-line-before": ["always", {
+         "except": [
+            "after-same-name",
+            "first-nested"
+         ],
+         "ignore": ["after-comment"]
+      }], 
+      "declaration-empty-line-before": "never", 
+      "length-zero-no-unit": true
+   }
+} 
