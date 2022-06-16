@@ -12,9 +12,8 @@ $grid-breakpoints: (
 );
 
 $grid-width-large: 160rem;
-$grid-width: 100rem;
-$gutter-vertical: 2rem;
-$gutter-horizontal: 2rem;
+$grid-width : 160rem / 12 * 10;
+$gutter: 2rem;
 
 $colors: (
   white: (

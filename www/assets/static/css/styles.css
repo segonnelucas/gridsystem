@@ -160,7 +160,7 @@ html {
 /* Fonts */
 .grid {
   display: grid;
-  grid-template-columns: [grid-full-start] minmax(1em, 1fr) [grid-main-start] minmax(0, 160rem) [grid-main-end] minmax(1em, 1fr) [grid-full-end];
+  grid-template-columns: [grid-full-start] minmax(auto, 1fr) [grid-main-start] repeat(12, minmax(auto, 13.33333rem)) [grid-main-end] minmax(auto, 1fr) [grid-full-end];
 }
 
 .grid > * {
@@ -171,16 +171,28 @@ html {
   grid-column: grid-main;
 }
 
-.grid > .sub-grid {
+.grid .sub-grid {
   display: grid;
-  grid-template-columns: [sub-grid-start] minmax(0, 100rem) [sub-grid-end];
+  grid-template-columns: [sub-grid-start] repeat(12, minmax(auto, 11.11111rem)) [sub-grid-end];
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.grid > .sub-grid__inner {
+.grid .sub-grid__inner {
   grid-column: sub-grid;
+}
+
+.grid .col--1-2 {
+  grid-column: 1 / 2;
+}
+
+.grid .col--3-6 {
+  grid-column: 3 / 6;
+}
+
+.grid .col--7-12 {
+  grid-column: 7 / 12;
 }
 
 /* stylelint-disable */

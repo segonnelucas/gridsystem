@@ -1,18 +1,31 @@
 .grid{
     display: grid;
-    grid-template-columns: [grid-full-start] minmax(1em, 1fr) [grid-main-start] minmax(0, $grid-width-large) [grid-main-end] minmax(1em, 1fr) [grid-full-end];
+    grid-template-columns: [grid-full-start] minmax(auto, 1fr) [grid-main-start] repeat(12, minmax(auto, $grid-width-large / 12)) [grid-main-end] minmax(auto, 1fr) [grid-full-end];
     & > * {
         grid-column: grid-full;
     }
     &__inner{
         grid-column: grid-main;
     }
-    & > .sub-grid{
+    .sub-grid{
         display: grid;
-        grid-template-columns: [sub-grid-start] minmax(0, $grid-width) [sub-grid-end];
+        grid-template-columns: [sub-grid-start] repeat(12, minmax(auto, $grid-width / 12)) [sub-grid-end];
         justify-content: center;
         &__inner{
             grid-column: sub-grid;
         }
     }
+
+
+    .col--1-2{
+        grid-column: 1 / 2;
+    }
+    .col--3-6{
+        grid-column: 3 / 6;
+    }
+    .col--7-12{
+        grid-column: 7 / 12;
+    }
+
 }
+
